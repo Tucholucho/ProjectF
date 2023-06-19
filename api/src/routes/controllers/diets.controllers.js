@@ -24,3 +24,38 @@ async function createDiets() {
         return await Diets.bulkCreate(basicDiets);
       } else return;
 }
+
+async function getApiDiets() {
+    const resAPI = await axios (
+        `https://api.spoonacular.com/recipes/complexSearch?addRecipeInformation=true&number=100&apiKey=${API_KEY}`
+    );
+    let diets = resAPI.data.results.map((recipe) => recipe.diets).flat(2).map(d => `${d[0].toUpperCase()}${d.substring(1)}`);
+    
+    return diets;
+}
+
+async function getDbDiets() {
+    let dbQuery = await Diets.findAll({
+        attribute: ["name"],
+    });
+
+    let diets =dbQuery.map((diet) => diet.dataValues.name);
+
+    return diets;
+}
+
+async function getDiets () {
+    const apiDiets = [];
+    const dbDiets = await getDbDiets();
+
+    let diets = apiDiets.concat(dbDiets).flat(2);
+
+    let setDiets = new Set(diets);
+
+    return [...setDiets];
+}
+
+module.exports = {
+    getDiets,
+    createDiets,
+};
