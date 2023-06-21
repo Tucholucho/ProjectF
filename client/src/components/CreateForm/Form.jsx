@@ -1,7 +1,7 @@
 import {useState} from "react";
 import validation from "./validation.js";
 import UploadWidget from "./UploadW.jsx"
-import "./from.modules.css";
+import "./form.modules.css";
 
 export default function From(props){
     const {createRecipe} = props;
@@ -25,7 +25,7 @@ export default function From(props){
         state: true,
     });
 
-    function handleImputChange(e){
+    function handleInputChange(e){
         setInputs({
             ...inputs,
             [e.target.name]: e.target.value,
@@ -54,7 +54,7 @@ export default function From(props){
 
     function onUpload(url){
         setInputs({
-            ...innputs, image: url
+            ...inputs, image: url
         });
     }
 

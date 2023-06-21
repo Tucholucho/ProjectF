@@ -20,7 +20,7 @@ export default function Detail () {
     const {recipeId} =useParams();
 
     useEffect(() => {
-        fetch(`http://localhost:3001/recipes/${recipesId}`)
+    fetch(`http://localhost:3001/recipes/${recipeId}`)
             .then((response) => response.json())
             .then((data) => {
                 setRecipe(data);

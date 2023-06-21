@@ -11,13 +11,13 @@ import {useDispatch, useSelector} from "react-redux";
 import {
   getAllRecipes,
   getDailyRecipes,
-  unfliterRecipes,
+  unfilterRecipe,
   filterRecipe,
   orderRecipes,
   orderDailyRecipes,
 } from "./redux/actions";
 import Nav from "./components/Nav/Nav";
-import Landing from "components/Landing/Landing";
+import Landing from "./components/Landing/Landing";
 import Render from "./components/Cards/Render";
 import Detail from "./components/Cards/Detail";
 import Form from "./components/CreateForm/Form";
@@ -48,7 +48,7 @@ function App(){
   const recipesPerPage = 9;
   const indexOfLastRecipe = currentPage * recipesPerPage;
   const indexOfFirstRecipe = indexOfLastRecipe - recipesPerPage;
-  const currentRecipe = recipe.slice(indexOfFirstRecipe, indexOfLastRecipe);
+  const currentRecipe = recipes.slice(indexOfFirstRecipe, indexOfLastRecipe);
 
   useEffect(() => {
     let search = searchParams.get("search");
@@ -67,7 +67,7 @@ function App(){
     orderCards({...orderBy, by, order});
     filterRecipes(filter);
 
-  }, []); //Que escuche los cambios url
+  }, [search, currentPage, orderBy, filterByDiet]); //Que escuche los cambios url
 
 
   useEffect(() => {
@@ -90,7 +90,7 @@ function App(){
     .then ((data) => {
       let dailyMeals = [];
 
-      let breakfast = data.find((r) => rdishhTypes.includes("Breakfast"));
+      let breakfast = data.find((r) => r.dishTypes.includes("Breakfast"));
       
       let lunch = 
         data.find((r) => r.dishTypes.includes("Lunch") && r !== breakfast) ||
@@ -110,7 +110,7 @@ function App(){
           r !== brunch
       ) || data.find((r) => r.dishTypes.includes("Dinner"));
 
-      dailyMeals.push[breakfast, lunch, brunch, dinner];
+      dailyMeals.push(breakfast, lunch, brunch, dinner);
 
       dispatch(getDailyRecipes(dailyMeals));
     });
@@ -188,14 +188,14 @@ function App(){
   }
 
   function filterRecipes(filter){
-    if (filter === "All") dispatch(unfiltterRecipe());
+    if (filter === "All") dispatch(unfilterRecipe());
     else if (filter !== "All") dispatch (filterRecipe(filter));
   }
 
   function orderCards(order) {
     let orderedRecipes = [];
     let orderedDailyRecipes = [];
-    if (order.by == "Alphabetical"){
+    if (order.by === "Alphabetical"){
       orderedRecipes =[...recipes].sort((a,b)=>
         sortTitle(a,b, order.order)
       );
@@ -230,9 +230,9 @@ function App(){
     }
   }
 
-  function sortHealScore(a,b,order){
+  function sortHealthScore(a,b,order){
     if (order==="Ascendant") return a.healthScore - b.healthScore;
-    else if (order == "Descendant") return b.healthScore - a.healtScore;
+    else if (order === "Descendant") return b.healthScore - a.healtScore;
   } 
 
   return (

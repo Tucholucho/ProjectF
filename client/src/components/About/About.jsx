@@ -1,12 +1,12 @@
 import profilePhoto from "../../assets/img/profilePhoto.jpg";
-import "./about.module.css";
+import "./about.modules.css";
 
 export default function ABout(props){
     return (
         <div className="aboutContainer">
             <div className="titleContainer">
                 <div className="profilePhoto">
-                    <img src={profilePic} alt="Foto" />
+                    <img src={profilePhoto} alt="Foto" />
                 </div>
                 <h1>
                     Created by <br/>

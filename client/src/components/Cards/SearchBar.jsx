@@ -1,4 +1,4 @@
-import "./searchbar.modules.css"
+import "./searchBar.modules.css"
 
 export default function SearchBar(props){
     const {
@@ -39,7 +39,7 @@ export default function SearchBar(props){
                 </select>
                 <label htmlFor="diets">Filteres by Diets</label>
                 <select name="diets" className="input" onChange={onFilterSelect}>
-                    {diets.map((d,i) =>{
+                    {diets.map((d, i) => {
                         <option key={i} value={`${d}`}>
                             {d}
                         </option>

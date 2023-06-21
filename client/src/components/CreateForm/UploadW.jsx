@@ -2,10 +2,10 @@ import { useEffect, useRef } from "react";
 
 export default function UploadWidget(props){
     const cloudinaryRef = useRef();
-    contWidgetRef = useRef();
+    const widgetRef = useRef();
 
     useEffect(() => {
-        cloudinaryRef.current = windows.cloudinary;
+        cloudinaryRef.current = window.cloudinary;
         widgetRef.current = cloudinaryRef.current.createUploadWidget(
             {
                 cloudname: "Tucholucho",

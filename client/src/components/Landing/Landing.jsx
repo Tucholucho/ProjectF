@@ -1,7 +1,7 @@
-import {useNavigate} from "react-routerr-dom";
-import "./landing.modules.css"; //Aca poner los modulos landing
-import logo from "../../assets/img/logo.png";
-import video from "../..assets/video/Landing.mp4";
+import {useNavigate} from "react-router-dom";
+import "./landing.modules.css";
+import logo from "../../assets/img/logo.jpg";
+import video from "../../assets/video/Landing.mp4";
 
 export default function Landing() {
     const navigate =useNavigate();

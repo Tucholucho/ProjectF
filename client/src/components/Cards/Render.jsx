@@ -2,15 +2,15 @@ import DailyRecipes from "./DailyRecipes";
 import Recipes from "./Recipes";
 import Pag from "./Pag";
 import SearchBar from "./SearchBar";
-import Loader from "../Loader.loader.jsx";
-import "/.render.modules.css";
+import Loader from "../Loader/Loader.jsx";
+import "./render.modules.css";
 
 export default function Render(props) {
     const {
         recipes,
         dailyRecipes,
-        gotToRecipeCreator,
-        Loading,
+        goToRecipeCreator,
+        loading,
         onSearch,
         diets,
         handleInputChange,
