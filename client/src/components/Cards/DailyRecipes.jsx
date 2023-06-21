@@ -7,7 +7,7 @@ export default function DailyRecipes(props){
             <h1>Meals of the Day</h1>
             {props.dailyRecipes.maps((r,idx) =>(
                 <Card
-                    key={r.id + IDBIndex}
+                    key={r.id + idx}
                     id={r.id}
                     title={r.title}
                     ealthScore={r.healthScore}
