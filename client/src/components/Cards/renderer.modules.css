@@ -1,0 +1,94 @@
+.rendererContainer {
+  margin-top: 10vh;
+  left: 0;
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  background-color: #fffaeb;
+}
+
+.searchContainer {
+  position: fixed;
+  left: 0;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #fffaeb;
+  padding-top: 0.5vh;
+  width: 100vw;
+  align-items: center;
+  margin: auto;
+  margin-top: 10vh;
+  margin-bottom: 2vh;
+  z-index: 999;
+}
+
+.recipesContainer {
+  margin-top: 25vh;
+}
+
+.roundButton {
+  position: fixed;
+  bottom: 5vh;
+  right: 5vh;
+  z-index: 999;
+  border-radius: 50%;
+  background-color: #f0f0d8;
+  font-weight: 900;
+  font-size: 1em;
+  font-style: italic;
+  line-height: 1.2;
+  color: #967c52;
+  box-shadow: inset 10px 5px 40px rgba(150, 124, 82, 0.75),
+    0px 0px 20px rgba(150, 124, 82, 0.75);
+  padding: 2em;
+  border: none;
+  width: auto;
+  cursor: pointer;
+}
+
+.roundButton:hover {
+  scale: 105%;
+  box-shadow: inset 10px 5px 40px rgba(150, 124, 82, 0.75),
+    0px 0px 20px rgba(150, 124, 82, 0.5);
+  transition: 0.75s;
+}
+
+.errorH1 {
+  margin: auto;
+  margin-top: 14vh;
+}
+
+@media screen and (max-width: 870px) {
+  .recipesContainer {
+    width: 100%;
+    margin: auto;
+    margin-top: 25vh;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .searchContainer {
+    margin-top: 8vh;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .recipesContainer {
+    margin-top: 25vh;
+  }
+
+  .recipesContainer .recipeTitle {
+    font-size: 1.4em;
+  }
+
+  .roundButton {
+    bottom: 7vh;
+    right: 7vh;
+    scale: 75%;
+  }
+  
+  .roundButton:hover {
+    scale: 60%;
+  }
+}

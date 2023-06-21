@@ -1,0 +1,95 @@
+.cardContainer {
+  display: inline-block;
+  width: 20vw;
+  height: 40vh;
+  background-color: #fffaeb;
+  box-shadow: 5px 5px 10px rgba(150, 124, 82, 0.75);
+  cursor: pointer;
+  border-radius: 20px;
+  font-family: "raleway";
+  margin: 20px;
+  transition: all 0.75s;
+  min-width: 300px;
+}
+
+.cardContainer:hover {
+  scale: 110%;
+  transition: all 0.75s;
+  box-shadow: 5px 5px 20px rgba(150, 124, 82, 0.5);
+}
+
+.cardContainer h1 {
+  font-size: 1rem;
+  font-weight: 900;
+  padding: 1vw;
+  margin: 0px;
+}
+
+.cardContainer a {
+  color: #967c52;
+  text-decoration: none;
+}
+
+.topHr {
+  width: 75%;
+  margin-bottom: 0px;
+  margin-top: 2vh;
+}
+
+.botHr {
+  width: 50%;
+  margin-top: 0px;
+}
+
+.infoContainer {
+  float: left;
+  width: 60%;
+}
+
+.infoContainer .elemHr {
+  margin: 10%;
+}
+
+.infoContainer .mapped {
+  font-size: 0.75em;
+}
+
+.cardImgContainer {
+  float: right;
+  height: 40vh;
+  width: 40%;
+  overflow: hidden;
+  border-radius: 0px 20px 20px 0px;
+}
+
+.cardImgContainer img {
+  height: 40vh;
+  width: auto;
+}
+
+@media screen and (max-width: 800px) {
+  .cardContainer {
+    border-radius: 15px;
+    margin: 15px;
+  }
+
+  .cardContainer h1 {
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 1vw;
+    margin: 0px;
+  }
+
+  .infoContainer .mapped {
+    font-size: 0.55em;
+  }
+
+  .infoContainer h4 {
+    margin: 3%;
+    font-size: 0.6em;
+  }
+
+  .cardImgContainer {
+    border-radius: 0px 15px 15px 0px;
+  }
+}
