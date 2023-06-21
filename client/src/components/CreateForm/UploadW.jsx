@@ -23,7 +23,7 @@ export default function UploadWidget(props){
         <div className="widgetContainer">
             <span className="uploadText">Upload an Image</span>
             <br />
-            <a onClick={() => widgetRef.current.open()}></a>
+            <a onClick={() => widgetRef.current.open()}>Upload</a>
         </div>
     );
 };

@@ -67,7 +67,7 @@ function App(){
     orderCards({...orderBy, by, order});
     filterRecipes(filter);
 
-  }, [search, currentPage, orderBy, filterByDiet]); //Que escuche los cambios url
+  }, []); //Que escuche los cambios url
 
 
   useEffect(() => {
