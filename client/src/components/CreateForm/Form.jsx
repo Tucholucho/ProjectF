@@ -1,7 +1,7 @@
 import {useState} from "react-router-dom";
 import validation from "./validation.js";
-import UploadWidget from "./UploadWidget.jsx"
-import "./from.modulex.css";
+import UploadWidget from "./UploadW.jsx"
+import "./from.modules.css";
 
 export default function From(props){
     const {createRecipe} = props;
@@ -188,5 +188,4 @@ export default function From(props){
             </div>
         </div>
     )
-
 }
