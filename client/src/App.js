@@ -20,9 +20,8 @@ import Nav from "./components/Nav/Nav";
 import Landing from "components/Landing/Landing";
 import Render from "./components/Cards/Render";
 import Detail from "./components/Cards/Detail";
-import Form from "./components/Creation/Form";
+import Form from "./components/CreateForm/Form";
 import About from "./components/About/About";
-import { Switch } from "react-router-dom/cjs/react-router-dom.min";
 
 const baseURL = "http://localhost:3001";
 
@@ -240,7 +239,6 @@ function App(){
     <div className="App">
       {location.pathname !== "/" && <Nav/>}
       <Routes>
-        <Switch>
         <Route path="/" element={<Landing/>} />
         <Route 
           path="/home"
@@ -266,10 +264,9 @@ function App(){
       <Route path="/recipes/:recipeId" element={<Detail />} />
       <Route
         path="/createRecipe"
-        element={<From createRecipe={createRecipe} loading={loading} />}
+        element={<Form createRecipe={createRecipe} loading={loading} />}
         />
         <Route path="/about" element={<About />} />
-        </Switch>
       </Routes>
     </div>
   );
