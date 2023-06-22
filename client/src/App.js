@@ -18,9 +18,9 @@ import {
 } from "./redux/actions";
 import Nav from "./components/Nav/Nav";
 import Landing from "./components/Landing/Landing";
-import Renderer from "./components/Cards/Render";
+import Renderer from "./components/Cards/Renderer";
 import Detail from "./components/Cards/Detail";
-import Form from "./components/CreateForm/Form";
+import Form from "./components/Creation/Form";
 import About from "./components/About/About";
 import axios from 'axios'
 axios.defaults.baseURL = 'https://pi-foods-deploy-production.up.railway.app'
