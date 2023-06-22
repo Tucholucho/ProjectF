@@ -18,14 +18,14 @@
   margin: 2vh 3vw;
 }
 
-.profilePhoto {
+.profilePic {
   float: right;
   border-radius: 20px;
   width: 200px;
   height: auto;
 }
 
-.profilePhoto img {
+.profilePic img {
   border-radius: 20px;
   width: 175px;
   height: auto;

@@ -9,7 +9,8 @@ const {API_KEY} = process.env;
 
 async function getAPIRecipes(name) {
     const responseAPI =await axios (
-        `https://api.spoonacular.com/recipes/complexSearch?addRecipeInformation=true&number=100&apiKey=${API_KEY}`
+        //`https://api.spoonacular.com/recipes/complexSearch?addRecipeInformation=true&number=100&apiKey=${API_KEY}`
+        `http://localhost:8080/recipes/complexSearch?addRecipeInformation=true&number=100&apiKey=${API_KEY}`
     );
 
     let recipes = resposeAPI.data.results.map((recipe) => {
@@ -182,7 +183,8 @@ async function attIdSearch(arr, type){
 
 async function getAPIRecipeById(id) {
     const resAPI = await axios(
-        `https://api.spoonacular.com/recipes/${id}/information?apiKey=${API_KEY}`
+        //`https://api.spoonacular.com/recipes/${id}/information?apiKey=${API_KEY}`
+        `http://localhost:8080/recipes/${id}/information?apiKey=${API_KEY}`
     );
 
     let recipe = resAPI.data;
