@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 
+
 export default function UploadWidget(props) {
   const cloudinaryRef = useRef();
   const widgetRef = useRef();
@@ -8,8 +9,8 @@ export default function UploadWidget(props) {
     cloudinaryRef.current = window.cloudinary;
     widgetRef.current = cloudinaryRef.current.createUploadWidget(
       {
-        cloudName: "Tucholucho",
-        uploadPreset: "The Cook Book",
+        cloudName: "efille",
+        uploadPreset: "The Good Cook Book",
       },
       function (error, result) {
         if (!error && result && result.event === "success") {

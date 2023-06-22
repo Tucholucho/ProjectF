@@ -33,7 +33,7 @@ export default function SearchBar(props){
                     <option value="Alphabetical">Alphabetical</option>
                     <option value="HealthScore">Heatlth Score</option>
                 </select>
-                <select name="order" className="input" oneChange={onSelect}>
+                <select name="order" className="input" onChange={onSelect}>
                     <option value="Ascendant">Ascendant</option>
                     <option value="Decendant">Descendant</option>
                 </select>
