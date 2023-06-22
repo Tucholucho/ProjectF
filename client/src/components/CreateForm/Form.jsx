@@ -1,6 +1,6 @@
 import { useState } from "react";
 import validation from "./validation.js";
-import UploadWidget from "./UploadW.jsx";
+import UploadWidget from "./UploadWidget.jsx";
 import "./form.modules.css";
 
 export default function Form(props) {
