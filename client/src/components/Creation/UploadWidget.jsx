@@ -9,8 +9,8 @@ export default function UploadWidget(props) {
     cloudinaryRef.current = window.cloudinary;
     widgetRef.current = cloudinaryRef.current.createUploadWidget(
       {
-        cloudName: "efille",
-        uploadPreset: "The Good Cook Book",
+        cloudName: "tucholucho",
+        uploadPreset: "The Cook Book",
       },
       function (error, result) {
         if (!error && result && result.event === "success") {

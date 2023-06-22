@@ -16,17 +16,15 @@ export default function About(props) {
       <hr className="divisor" />
       <div className="aboutMe">
         <p>
-          Hi! My name is Erik, and I'm <b>your future Fullstack Dev</b>.{" "}
+          Hola, mi nombre es Luciano Benitez y este es mi <b>Proyecto Individual</b>.{" "}
         </p>
         <p>
-          I'm a <b>highly motivated learner</b>, with <b>great comprehension</b>{" "}
-          and <b>communication skills</b> and <b>team leading experience</b> as <b>Project Manager</b> &{" "}
-          <b>Creative Director</b>.
+          Estoy <b>ansioso</b> y <b>motivado</b>{" "} por pasar a la
+          proxima y ultima instancia, el <b>Proyecto Final</b>.
         </p>{" "}
         <p>
-          I'm really good at <b>troubleshooting</b> and{" "}
-          <b>resource optimization</b> through both <b>logical</b> and{" "}
-          <b>creative thinking</b>.
+          Soy bueno en la parte de <b>back end</b> y, {" "}
+          aunque no es mi favorita, se manejarme lo suficientemente bien en el <b>front end</b>
         </p>
       </div>
     </div>
